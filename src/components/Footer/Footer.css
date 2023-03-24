@@ -1,0 +1,45 @@
+@import url(//db.onlinewebfonts.com/c/65dc1b4fb1cd6bf31e730421533dafc7?family=ITCAvantGardeGothicW02-Md);
+
+
+@font-face {font-family: "ITCAvantGardeGothicW02-Md"; src: url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.eot"); src: url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.woff") format("woff"), url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.svg#ITCAvantGardeGothicW02-Md") format("svg"); }
+
+
+/* Header Desktop */
+
+#footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    height: 73px;
+    background: linear-gradient(90deg, #D1E0EF 1.38%, #A3D8DE 20.03%, #FED6DF 37.51%, #B8E2D2 53.82%, #C7AFCC 70.72%, #ADD1ED 86.45%, #B979AF 110.34%, rgba(217, 217, 217, 0) 113.26%);
+}
+
+#center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#footerTitle{
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #3B5E82;
+}
+
+#iglooIconFooter{
+    width: 20px;
+    height: 20px;
+    color: #3B5E82;
+    margin-right: 10px;
+}
