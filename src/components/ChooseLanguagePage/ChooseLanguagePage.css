@@ -1,13 +1,12 @@
-#chooseLanguage{
+#choose-language{
     display: flex;
     flex-direction: column;
-    width: 100%;
     height: 100%;
     margin-top: 50px;
     margin-left: 10%;
 }
 
-#chooseText{
+#choose-text{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +15,7 @@
     height: 100%;
     text-align: left;
 
-    font-family: Raleway, sans-serif;
+    font-family: AvantGarde, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
@@ -25,7 +24,7 @@
     color: #000000;
 }
 
-#chooseText > * {
+#choose-text > * {
     width: 50%;
 }
 
@@ -35,4 +34,17 @@
     flex-direction: column;
     gap: 30px;
     margin-left: 200px;
+}
+
+#buttons-and-map{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+#global-map{
+    margin-top: 50px;
+    margin-left: 200px;
+    width: 862px;
+    height: 475px;
 }

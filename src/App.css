@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+@font-face {
+  font-family: 'AvantGarde';
+  src: local('AvantGarde'), url(./fonts/ITCAvantGardeSTD/ITCAvantGardeStd-Bk.woff2) format('woff2');
+}
+
 html, body {
   width: 100%;
   height: 100%;

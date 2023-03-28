@@ -1,20 +1,22 @@
-.language-button{
+.answer-button{
     display: flex;
     align-items: center;
-    width: 290px;
+    justify-content: center;
+    width: 1249px;
     height: 56px;
-    cursor: pointer;
     background: #ECECEC;
     border-radius: 10px;
     border-color: #ECECEC;
     filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.25));
+    text-align: center;
 }
 
-.language-button:hover:not([disabled]) {
+.answer-button:hover:not([disabled]) {
     background: #CECECE;
+    cursor: pointer;
 }
 
-.language-text{
+.answer-text{
     font-family: AvantGarde, sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -23,9 +25,10 @@
     color: #000000;
 }
 
-.flag-icon{
-    margin-right: 5px;
-    margin-left: 20px;
-    height: 20px;
-    width: auto;
+.correct{
+    background: #B9E2D3;
+}
+
+.wrong{
+    background: #FF9595;
 }

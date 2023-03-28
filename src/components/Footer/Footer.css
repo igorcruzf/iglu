@@ -7,13 +7,12 @@
 /* Header Desktop */
 
 #footer {
+    position: absolute;
     width: 100%;
-    position: fixed;
     bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: auto;
     height: 73px;
     background: linear-gradient(90deg, #D1E0EF 1.38%, #A3D8DE 20.03%, #FED6DF 37.51%, #B8E2D2 53.82%, #C7AFCC 70.72%, #ADD1ED 86.45%, #B979AF 110.34%, rgba(217, 217, 217, 0) 113.26%);
 }
@@ -27,17 +26,18 @@
     height: 100%;
 }
 
-#footerTitle{
-    font-family: Raleway, sans-serif;
+#footer-title{
+    font-family: AvantGarde, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
     color: #3B5E82;
+    margin-top: 10px;
 }
 
-#iglooIconFooter{
+#igloo-icon-footer{
     width: 20px;
     height: 20px;
     color: #3B5E82;

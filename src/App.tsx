@@ -4,6 +4,7 @@ import './App.css';
 import ChooseLanguagePage from "./components/ChooseLanguagePage/ChooseLanguagePage";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import QuizPage from "./components/QuizPage/QuizPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
      <div id={"main"}>
        <Routes>
          <Route path="/" element={<ChooseLanguagePage/>}/>
+         <Route path="/quiz" element={<QuizPage/>}/>
        </Routes>
      </div>
     <Footer/>
