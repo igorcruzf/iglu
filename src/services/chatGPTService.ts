@@ -33,8 +33,10 @@ type ApiParams = {
 };
 
 export const fetchQuizData = async ({language}: ApiParams): Promise<QuizData> => {
+    const token = process.env.REACT_APP_API_KEY;
+    console.log(token)
     const apiEndpoint = 'https://api.openai.com/v1/chat/completions';
-    const authHeader = {Authorization: `Bearer key`};
+    const authHeader = {Authorization: `Bearer ${token}`};
     const requestData = {
         model: 'gpt-3.5-turbo',
         messages: [
