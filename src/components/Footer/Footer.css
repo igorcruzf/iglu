@@ -1,7 +1,11 @@
 @import url(//db.onlinewebfonts.com/c/65dc1b4fb1cd6bf31e730421533dafc7?family=ITCAvantGardeGothicW02-Md);
 
 
-@font-face {font-family: "ITCAvantGardeGothicW02-Md"; src: url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.eot"); src: url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.woff") format("woff"), url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.svg#ITCAvantGardeGothicW02-Md") format("svg"); }
+@font-face {
+    font-family: "ITCAvantGardeGothicW02-Md";
+    src: url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.eot");
+    src: url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.woff") format("woff"), url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/65dc1b4fb1cd6bf31e730421533dafc7.svg#ITCAvantGardeGothicW02-Md") format("svg");
+}
 
 
 /* Header Desktop */
@@ -26,7 +30,7 @@
     height: 100%;
 }
 
-#footer-title{
+#footer-title {
     font-family: AvantGarde, sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -37,7 +41,7 @@
     margin-top: 10px;
 }
 
-#igloo-icon-footer{
+#igloo-icon-footer {
     width: 20px;
     height: 20px;
     color: #3B5E82;

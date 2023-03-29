@@ -9,7 +9,7 @@ interface AnswerProps {
     correct?: boolean;
 }
 
-const QuizAnswer: React.FC<AnswerProps> = ({ onClick, text , disable = false, selected= false, correct = false}) => {
+const QuizAnswer: React.FC<AnswerProps> = ({onClick, text, disable = false, selected = false, correct = false}) => {
 
     const className = `answer-button ${selected ? (correct ? 'correct' : 'wrong') : ''}`;
 

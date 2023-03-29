@@ -1,4 +1,4 @@
-#choose-language{
+#choose-language {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -6,7 +6,7 @@
     margin-left: 10%;
 }
 
-#choose-text{
+#choose-text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +28,7 @@
     width: 50%;
 }
 
-#language-buttons{
+#language-buttons {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -36,13 +36,13 @@
     margin-left: 200px;
 }
 
-#buttons-and-map{
+#buttons-and-map {
     margin-top: 50px;
     display: flex;
     flex-direction: row;
 }
 
-#global-map{
+#global-map {
     margin-top: 50px;
     margin-left: 200px;
     width: 862px;

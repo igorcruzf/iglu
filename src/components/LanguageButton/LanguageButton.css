@@ -1,4 +1,4 @@
-.language-button{
+.language-button {
     display: flex;
     align-items: center;
     width: 290px;
@@ -14,7 +14,7 @@
     background: #CECECE;
 }
 
-.language-text{
+.language-text {
     font-family: AvantGarde, sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -23,7 +23,7 @@
     color: #000000;
 }
 
-.flag-icon{
+.flag-icon {
     margin-right: 5px;
     margin-left: 20px;
     height: 20px;

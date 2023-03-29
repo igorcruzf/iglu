@@ -1,7 +1,9 @@
 import './Footer.css'
+import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faIgloo } from '@fortawesome/free-solid-svg-icons';
-export default function Footer(){
+import {faIgloo} from '@fortawesome/free-solid-svg-icons';
+
+export default function Footer() {
     return <div id={"footer"}>
         <div id={"center"}>
             <FontAwesomeIcon icon={faIgloo} id={"igloo-icon-footer"}/>

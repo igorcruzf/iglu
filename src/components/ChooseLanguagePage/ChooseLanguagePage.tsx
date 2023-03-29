@@ -1,23 +1,23 @@
 import './ChooseLanguagePage.css'
 import React from "react";
 import LanguageButton from "../LanguageButton/LanguageButton";
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 export default function ChooseLanguagePage() {
 
     const navigate = useNavigate();
     const handleClick = (flagUrl: string, text: string) => {
-        navigate('/quiz', { state: { flagUrl, text } });
+        navigate('/quiz', {state: {flagUrl, text}});
     };
 
     const languages = [
-        { flagUrl: "images/flags/brazilflag.png", text: "Português (BR)" },
-        { flagUrl: "images/flags/usaflag.png", text: "Inglês" },
-        { flagUrl: "images/flags/spainflag.png", text: "Espanhol" },
+        {flagUrl: "images/flags/brazilflag.png", text: "Português (BR)"},
+        {flagUrl: "images/flags/usaflag.png", text: "Inglês"},
+        {flagUrl: "images/flags/spainflag.png", text: "Espanhol"},
         // { flagUrl: "images/flags/chinaflag.png", text: "Mandarim" },
         // { flagUrl: "images/flags/japanflag.png", text: "Japonês" },
-        { flagUrl: "images/flags/franceflag.png", text: "Francês" },
-        { flagUrl: "images/flags/germanyflag.png", text: "Alemão" }
+        {flagUrl: "images/flags/franceflag.png", text: "Francês"},
+        {flagUrl: "images/flags/germanyflag.png", text: "Alemão"}
     ];
 
     return <div id={"choose-language"}>
@@ -27,7 +27,7 @@ export default function ChooseLanguagePage() {
         </div>
         <div id={"buttons-and-map"}>
             <div id={"language-buttons"}>
-                {languages.map(({ flagUrl, text }) => (
+                {languages.map(({flagUrl, text}) => (
                     <LanguageButton
                         key={text}
                         onClick={() => handleClick(flagUrl, text)}

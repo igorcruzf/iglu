@@ -1,4 +1,4 @@
-.answer-button{
+.answer-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@
     cursor: pointer;
 }
 
-.answer-text{
+.answer-text {
     font-family: AvantGarde, sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -25,10 +25,10 @@
     color: #000000;
 }
 
-.correct{
+.correct {
     background: #B9E2D3;
 }
 
-.wrong{
+.wrong {
     background: #FF9595;
 }

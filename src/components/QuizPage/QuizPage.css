@@ -1,4 +1,4 @@
-#quiz-page-container{
+#quiz-page-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,18 +6,18 @@
 }
 
 
-#chosen-language > *{
+#chosen-language > * {
     cursor: default;
 }
 
-#quiz-container{
+#quiz-container {
     margin-top: 100px;
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
 
-#quiz-number{
+#quiz-number {
     font-family: AvantGarde, sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -26,7 +26,7 @@
     color: #000000;
 }
 
-#history{
+#history {
     font-family: AvantGarde, sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -38,7 +38,7 @@
     height: 236px;
 }
 
-#question{
+#question {
     font-family: AvantGarde, sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -48,14 +48,14 @@
     margin-top: 40px;
 }
 
-#answers{
+#answers {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-#arrows{
+#arrows {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -68,6 +68,7 @@
     height: 50px;
     margin-left: auto;
     margin-right: 30px;
+    cursor: pointer;
 }
 
 .arrow-left {

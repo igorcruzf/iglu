@@ -1,13 +1,14 @@
 import React from 'react';
 import './LanguageButton.css'
+
 interface ButtonProps {
-    onClick: () => void;
+    onClick?: () => void;
     text: string;
     flagUrl: string;
     disable?: boolean;
 }
 
-const LanguageButton: React.FC<ButtonProps> = ({ onClick, text , flagUrl, disable = false}) => {
+const LanguageButton: React.FC<ButtonProps> = ({onClick = undefined, text, flagUrl, disable = false}) => {
     return (
         <button className={"language-button"} onClick={onClick} disabled={disable}>
             <div className={"language-text"}>
