@@ -5,7 +5,7 @@ import {faIgloo} from '@fortawesome/free-solid-svg-icons';
 import {Link} from "react-router-dom";
 
 export default function Header() {
-    return <Link to="/" style={{textDecoration: 'none'}}>
+    return <Link to="/iglu" style={{textDecoration: 'none'}}>
         <div id={"header"}>
             <FontAwesomeIcon icon={faIgloo} id={"igloo-icon"}/>
             <div id={"title"}>

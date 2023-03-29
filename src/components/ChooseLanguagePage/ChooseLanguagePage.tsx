@@ -7,7 +7,7 @@ export default function ChooseLanguagePage() {
 
     const navigate = useNavigate();
     const handleClick = (flagUrl: string, text: string) => {
-        navigate('/quiz', {state: {flagUrl, text}});
+        navigate('/iglu/quiz', {state: {flagUrl, text}});
     };
 
     const languages = [

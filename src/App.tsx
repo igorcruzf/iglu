@@ -12,8 +12,9 @@ function App() {
             <Header/>
             <div id={"main"}>
                 <Routes>
+                    <Route path="/iglu/" element={<ChooseLanguagePage/>}/>
                     <Route path="/" element={<ChooseLanguagePage/>}/>
-                    <Route path="/quiz" element={<QuizPage/>}/>
+                    <Route path="/iglu/quiz" element={<QuizPage/>}/>
                 </Routes>
             </div>
             <Footer/>
