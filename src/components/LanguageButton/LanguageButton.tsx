@@ -1,5 +1,5 @@
 import React from 'react';
-import './LanguageButton.css'
+import { Button, LanguageText, FlagIcon } from './styled';
 
 interface ButtonProps {
     onClick?: () => void;
@@ -8,14 +8,14 @@ interface ButtonProps {
     disable?: boolean;
 }
 
-const LanguageButton: React.FC<ButtonProps> = ({onClick = undefined, text, flagUrl, disable = false}) => {
+const LanguageButton: React.FC<ButtonProps> = ({ onClick = () => null, text, flagUrl, disable = false }) => {
     return (
-        <button className={"language-button"} onClick={onClick} disabled={disable}>
-            <div className={"language-text"}>
-                <img className={"flag-icon"} src={`${process.env.PUBLIC_URL}/${flagUrl}`} alt=""/>
+        <Button disabled={disable} onClick={onClick}>
+            <LanguageText>
+                <FlagIcon src={`${process.env.PUBLIC_URL}/${flagUrl}`} alt="Flag icon" />
                 {text}
-            </div>
-        </button>
+            </LanguageText>
+        </Button>
     );
 };
 

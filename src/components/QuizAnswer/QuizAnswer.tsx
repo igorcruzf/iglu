@@ -1,5 +1,5 @@
 import React from "react";
-import './QuizAnswer.css';
+import {AnswerButton, AnswerText} from "./styled";
 
 interface AnswerProps {
     onClick: () => void;
@@ -9,17 +9,24 @@ interface AnswerProps {
     correct?: boolean;
 }
 
-const QuizAnswer: React.FC<AnswerProps> = ({onClick, text, disable = false, selected = false, correct = false}) => {
-
-    const className = `answer-button ${selected ? (correct ? 'correct' : 'wrong') : ''}`;
+const QuizAnswer: React.FC<AnswerProps> =
+    ({
+       onClick,
+       text,
+       disable = false,
+       selected = false,
+       correct = false,
+    }) => {
+    const className = `${selected ? (correct ? "correct" : "wrong") : ""}`;
 
     return (
-        <button className={className} onClick={onClick} disabled={disable}>
-            <div className={"answer-text"}>
-                {text}
-            </div>
-        </button>
+        <AnswerButton className={className} onClick={onClick} disabled={disable}>
+            <AnswerText>{text}</AnswerText>
+        </AnswerButton>
     );
-}
+};
 
 export default QuizAnswer;
+
+
+

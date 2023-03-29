@@ -1,12 +1,22 @@
-import './QuizPage.css'
 import React, {useEffect, useState} from "react";
 import LanguageButton from "../LanguageButton/LanguageButton";
 import QuizAnswer from "../QuizAnswer/QuizAnswer";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleArrowLeft, faCircleArrowRight} from "@fortawesome/free-solid-svg-icons";
 import {Link, useLocation} from 'react-router-dom';
 import {fetchQuizData, QuizData} from '../../services/chatGPTService';
 import LoadingIcon from "../LoadingIcon/LoadingIcon";
+import {
+    Answers,
+    ArrowLeft,
+    ArrowRight,
+    Arrows,
+    ChosenLanguage,
+    History,
+    Question,
+    QuizContainer,
+    QuizNumber,
+    QuizPageContainer
+} from "./styled";
 
 export default function QuizPage() {
 
@@ -16,11 +26,11 @@ export default function QuizPage() {
     const [quizNumber, setQuizNumber] = useState<number>(1);
 
     const location = useLocation();
-    const {flagUrl, text} = location.state;
+    const { flagUrl, text } = location.state;
 
     useEffect(() => {
         const getQuizData = async () => {
-            const quizData = await fetchQuizData({language: text});
+            const quizData = await fetchQuizData({ language: text });
             setQuizData(quizData);
         };
 
@@ -28,10 +38,10 @@ export default function QuizPage() {
     }, [text, quizNumber]);
 
     if (!quizData) {
-        return <LoadingIcon/>
+        return <LoadingIcon />
     }
 
-    const {history, question, correctAnswer, wrongAnswers} = quizData;
+    const { history, question, correctAnswer, wrongAnswers } = quizData;
     const answers = [correctAnswer, ...wrongAnswers];
 
     const handleAnswer = (answer: string) => {
@@ -46,30 +56,30 @@ export default function QuizPage() {
         setQuizData(undefined)
     }
 
-    return <div id={"quiz-page-container"}>
-        <div id={"quiz-container"}>
-            <div id={"chosen-language"}>
+    return <QuizPageContainer>
+        <QuizContainer>
+            <ChosenLanguage>
                 <LanguageButton text={text} flagUrl={flagUrl} disable={true}/>
-            </div>
-            <div id={"quiz-number"}>
+            </ChosenLanguage>
+            <QuizNumber>
                 {quizNumber}.
-            </div>
-            <div id={"history"}>
+            </QuizNumber>
+            <History>
                 {history}
-            </div>
-        </div>
-        <div id={"question"}>
+            </History>
+        </QuizContainer>
+        <Question>
             {question}
-        </div>
-        <div id={"answers"}>
+        </Question>
+        <Answers>
             {answers.map(answer => (
                 <QuizAnswer key={answer} onClick={() => handleAnswer(answer)} text={answer} disable={disable}
                             selected={selectedAnswer === answer} correct={selectedAnswer === correctAnswer}/>
             ))}
-        </div>
-        <div id={"arrows"}>
-            <Link to=".."><FontAwesomeIcon icon={faCircleArrowLeft} className={"arrow-left"}/></Link>
-            <FontAwesomeIcon onClick={handleClick} icon={faCircleArrowRight} className={"arrow-right"}/>
-        </div>
-    </div>
+        </Answers>
+        <Arrows>
+            <Link to=".."><ArrowLeft icon={faCircleArrowLeft}/></Link>
+            <ArrowRight onClick={handleClick} icon={faCircleArrowRight}/>
+        </Arrows>
+    </QuizPageContainer>
 }

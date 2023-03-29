@@ -1,14 +1,13 @@
-import React, {useEffect, useState} from 'react'
-
-import './LoadingIcon.css'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faIgloo} from '@fortawesome/free-solid-svg-icons'
+import React, {useEffect, useState} from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faIgloo} from '@fortawesome/free-solid-svg-icons';
+import {Container, LoadingName} from "./styled";
 
 interface LoadingProps {
     colors?: string[];
 }
 
-const LoadingIcon: React.FC<LoadingProps> = ({colors = ['#62DEFA', '#F8BFCA', '#41FFA5', '#BC94D2', '#414141']}) => {
+const LoadingIcon: React.FC<LoadingProps> = ({ colors = ['#62DEFA', '#F8BFCA', '#41FFA5', '#BC94D2', '#414141'] }) => {
     const [currentColorIndex, setCurrentColorIndex] = useState(0);
 
     useEffect(() => {
@@ -19,13 +18,11 @@ const LoadingIcon: React.FC<LoadingProps> = ({colors = ['#62DEFA', '#F8BFCA', '#
     }, [colors.length]);
 
     return (
-        <div className="loading-container">
-            <FontAwesomeIcon icon={faIgloo} color={colors[currentColorIndex]} size={"5x"} bounce/>
-            <div className={"loading-name"} style={{color: colors[currentColorIndex]}}>
-                IGLU
-            </div>
-        </div>
-    )
-}
+        <Container>
+            <FontAwesomeIcon icon={faIgloo} color={colors[currentColorIndex]} size={"5x"} bounce />
+            <LoadingName style={{ color: colors[currentColorIndex] }}>IGLU</LoadingName>
+        </Container>
+    );
+};
 
-export default LoadingIcon
+export default LoadingIcon;

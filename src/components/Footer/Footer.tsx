@@ -1,15 +1,14 @@
-import './Footer.css'
 import React from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faIgloo} from '@fortawesome/free-solid-svg-icons';
+import {FooterContainer, FooterTitle, IglooIcon} from "./styled";
 
 export default function Footer() {
-    return <div id={"footer"}>
-        <div id={"center"}>
-            <FontAwesomeIcon icon={faIgloo} id={"igloo-icon-footer"}/>
-            <div id={"footer-title"}>
+    return (
+        <FooterContainer>
+            <IglooIcon icon={faIgloo} />
+            <FooterTitle>
                 © Todos os direitos reservados.
-            </div>
-        </div>
-    </div>
+            </FooterTitle>
+        </FooterContainer>
+    );
 }
