@@ -34,7 +34,7 @@ type ApiParams = {
 
 export const fetchQuizData = async ({language}: ApiParams): Promise<QuizData> => {
     const apiEndpoint = 'https://api.openai.com/v1/chat/completions';
-    const authHeader = {Authorization: `Bearer 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`};
+    const authHeader = {Authorization: `Bearer key`};
     const requestData = {
         model: 'gpt-3.5-turbo',
         messages: [
