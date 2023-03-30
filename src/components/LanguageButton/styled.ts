@@ -10,7 +10,7 @@ export const Button = styled.button`
   border-radius: 10px;
   border-color: #ECECEC;
   filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.25));
-
+  margin: 0 auto;
   &:hover:not([disabled]) {
     background: #CECECE;
   }

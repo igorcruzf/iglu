@@ -13,7 +13,7 @@ export const HeaderContainer = styled.div`
   width: 100%;
   height: 73px;
   background: linear-gradient(90deg, #D1E0EF 1.38%, #A3D8DE 20.03%, #FED6DF 37.51%, #B8E2D2 53.82%, #C7AFCC 70.72%, #ADD1ED 86.45%, #B979AF 110.34%, rgba(217, 217, 217, 0) 113.26%);
-  
+  z-index: 1;
   @media (max-width: 600px){
     justify-content: center;
     align-items: center;

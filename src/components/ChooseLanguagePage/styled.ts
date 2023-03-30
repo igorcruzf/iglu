@@ -6,6 +6,7 @@ export const ChooseLanguageContainer = styled.div`
   height: 100%;
   margin-top: 50px;
   margin-left: 10%;
+  padding-bottom: 100px;
 
   @media (max-width: 600px){
     justify-content: center;
@@ -22,6 +23,7 @@ export const ChooseTextContainer = styled.div`
   width: 100%;
   height: 100%;
   text-align: left;
+  
 
   font-family: AvantGarde, sans-serif;
   font-style: normal;
@@ -33,7 +35,6 @@ export const ChooseTextContainer = styled.div`
 
   @media (max-width: 600px){
     width: inherit;
-    font-weight: 700;
     font-size: 20px;
     align-items: flex-start;
     align-content: center;
@@ -62,6 +63,8 @@ export const ButtonsAndMapContainer = styled.div`
   margin-top: 50px;
   display: flex;
   flex-direction: row;
+  @media (max-width: 600px){
+  }
 `;
 
 export const GlobalMapImage = styled.img`

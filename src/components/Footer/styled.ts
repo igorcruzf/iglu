@@ -5,6 +5,7 @@ export const FooterContainer = styled.div`
   position: fixed;
   width: 100%;
   bottom: 0;
+  left: 0;
   height: 73px;
   display: flex;
   justify-content: center;
@@ -20,6 +21,10 @@ export const FooterContainer = styled.div`
     #b979af 110.34%,
     rgba(217, 217, 217, 0) 113.26%
   );
+  @media (max-width: 600px){
+    justify-content: center;
+    margin-left: 0;
+  }
 `;
 
 export const FooterTitle = styled.div`
