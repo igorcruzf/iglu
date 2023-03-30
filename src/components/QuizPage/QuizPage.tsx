@@ -29,11 +29,11 @@ export default function QuizPage() {
     const [reload, setReload] = useState<boolean>(false);
 
     const location = useLocation();
-    const {flagUrl, text} = location.state;
+    const {flagUrl, text, language} = location.state;
 
     useEffect(() => {
         const getQuizData = async () => {
-            const newQuizDataList = await fetchQuizData({language: text});
+            const newQuizDataList = await fetchQuizData({language: language});
             if (quizDataList) {
                 setQuizDataList([...quizDataList, ...newQuizDataList])
             } else {
