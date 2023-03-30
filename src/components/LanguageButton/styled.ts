@@ -29,5 +29,5 @@ export const FlagIcon = styled.img`
   margin-right: 5px;
   margin-left: 20px;
   height: 20px;
-  width: auto;
+  width: 30px;
 `;
