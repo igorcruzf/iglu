@@ -21,39 +21,64 @@ import {
 export default function QuizPage() {
 
     const [quizData, setQuizData] = useState<QuizData | undefined>();
+    const [quizDataList, setQuizDataList] = useState<QuizData[]>();
+    const [quizDataIndex, setQuizDataIndex] = useState<number>(0);
     const [disable, setDisable] = useState<boolean>();
     const [selectedAnswer, setSelectedAnswer] = useState<string>();
     const [quizNumber, setQuizNumber] = useState<number>(1);
+    const [reload, setReload] = useState<boolean>(false);
 
     const location = useLocation();
-    const { flagUrl, text } = location.state;
+    const {flagUrl, text} = location.state;
 
     useEffect(() => {
         const getQuizData = async () => {
-            const quizData = await fetchQuizData({ language: text });
-            setQuizData(quizData);
+            const newQuizDataList = await fetchQuizData({language: text});
+            if (quizDataList) {
+                setQuizDataList([...quizDataList, ...newQuizDataList])
+            } else {
+                setQuizDataList([...newQuizDataList])
+                setQuizData(newQuizDataList[0]);
+            }
         };
 
         getQuizData();
-    }, [text, quizNumber]);
+        setReload(false)
+    }, [text, reload]);
 
     if (!quizData) {
-        return <LoadingIcon />
+        if (quizDataList && quizDataList?.length != 0 && quizDataIndex !== quizDataList.length - 1) {
+            setQuizData(quizDataList[quizDataIndex + 1])
+            setQuizDataIndex(1 + quizDataIndex)
+            return <LoadingIcon/>
+        } else {
+            return <LoadingIcon/>
+        }
     }
 
-    const { history, question, correctAnswer, wrongAnswers } = quizData;
-    const answers = [correctAnswer, ...wrongAnswers];
+    const {history, question, correctAnswer, answers} = quizData;
 
     const handleAnswer = (answer: string) => {
         setDisable(true)
         setSelectedAnswer(answer)
     }
-
     const handleClick = () => {
-        setQuizNumber(1 + quizNumber)
-        setDisable(false)
-        setSelectedAnswer("")
-        setQuizData(undefined)
+        if(disable) {
+            if (quizDataList) {
+                if (quizDataIndex === quizDataList?.length - 1) {
+                    setQuizData(undefined)
+                } else {
+                    if (quizDataIndex === quizDataList?.length - 5) {
+                        setReload(true)
+                    }
+                    setQuizData(quizDataList[quizDataIndex + 1])
+                    setQuizDataIndex(1 + quizDataIndex)
+                }
+            }
+            setQuizNumber(1 + quizNumber)
+            setDisable(false)
+            setSelectedAnswer("")
+        }
     }
 
     return <QuizPageContainer>
