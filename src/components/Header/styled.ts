@@ -7,6 +7,7 @@ export const HeaderLink = styled(Link)`
 `;
 
 export const HeaderContainer = styled.div`
+  position: fixed;
   display: flex;
   width: 100%;
   height: 73px;

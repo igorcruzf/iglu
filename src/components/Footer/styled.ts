@@ -1,15 +1,25 @@
 import styled from "styled-components";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const FooterContainer = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0;
   height: 73px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, #D1E0EF 1.38%, #A3D8DE 20.03%, #FED6DF 37.51%, #B8E2D2 53.82%, #C7AFCC 70.72%, #ADD1ED 86.45%, #B979AF 110.34%, rgba(217, 217, 217, 0) 113.26%);
+  background: linear-gradient(
+    90deg,
+    #d1e0ef 1.38%,
+    #a3d8de 20.03%,
+    #fed6df 37.51%,
+    #b8e2d2 53.82%,
+    #c7afcc 70.72%,
+    #add1ed 86.45%,
+    #b979af 110.34%,
+    rgba(217, 217, 217, 0) 113.26%
+  );
 `;
 
 export const FooterTitle = styled.div`
@@ -19,13 +29,13 @@ export const FooterTitle = styled.div`
   font-size: 14px;
   line-height: 17px;
   text-align: center;
-  color: #3B5E82;
+  color: #3b5e82;
   margin-top: 10px;
 `;
 
 export const IglooIcon = styled(FontAwesomeIcon)`
   width: 20px;
   height: 20px;
-  color: #3B5E82;
+  color: #3b5e82;
   margin-right: 10px;
 `;
