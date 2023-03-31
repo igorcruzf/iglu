@@ -2,10 +2,6 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const FooterContainer = styled.div`
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
   height: 73px;
   display: flex;
   justify-content: center;

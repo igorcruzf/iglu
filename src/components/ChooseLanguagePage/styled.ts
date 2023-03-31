@@ -18,11 +18,13 @@ export const ChooseLanguageContainer = styled.div`
 export const ChooseTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  align-content: center;
   justify-content: center;
-  width: 100%;
+  width: inherit;
   height: 100%;
   text-align: left;
+  margin-left: 20%;
   
 
   font-family: AvantGarde, sans-serif;
@@ -32,6 +34,11 @@ export const ChooseTextContainer = styled.div`
   line-height: 58px;
 
   color: #000000;
+  
+  @media (max-width: 1350px){
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 
   @media (max-width: 600px){
     width: inherit;
@@ -54,6 +61,18 @@ export const LanguageButtonsContainer = styled.div`
   gap: 30px;
   margin-left: 200px;
 
+  @media (max-width: 1750px){
+    margin-left: 100px;
+  }
+
+  @media (max-width: 1250px){
+    margin-left: 50px;
+  }
+
+  @media (max-width: 1250px){
+    margin-left: 0;
+  }
+
   @media (max-width: 600px){
     margin-left: 0;
   }
@@ -63,17 +82,19 @@ export const ButtonsAndMapContainer = styled.div`
   margin-top: 50px;
   display: flex;
   flex-direction: row;
-  @media (max-width: 600px){
+  align-items: center;
+
+  @media (max-width: 1000px){
+    display: block;
   }
 `;
 
 export const GlobalMapImage = styled.img`
-  margin-top: 50px;
-  margin-left: 200px;
-  width: 862px;
-  height: 475px;
-
-  @media (max-width: 600px){
+  margin-left: 10%;
+  width: 50%;
+  height: 30%;
+  
+  @media (max-width: 1000px){
     display: none;
   }
 `;
