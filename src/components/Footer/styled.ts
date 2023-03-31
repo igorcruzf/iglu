@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const FooterContainer = styled.div`
-  height: 73px;
+  height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
