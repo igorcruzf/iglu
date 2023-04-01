@@ -22,7 +22,7 @@ export const AnswerButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1249px;
+  width: 1200px;
   height: 56px;
   background: #ececec;
   border-radius: 10px;
