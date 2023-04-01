@@ -6,7 +6,6 @@ export const ChooseLanguageContainer = styled.div`
   height: 100%;
   margin-top: 50px;
   margin-left: 10%;
-  padding-bottom: 100px;
 
   @media (max-width: 600px){
     justify-content: center;

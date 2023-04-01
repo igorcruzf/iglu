@@ -5,16 +5,13 @@
     src: local('AvantGarde'), url(./fonts/ITCAvantGardeSTD/ITCAvantGardeStd-Bk.woff2) format('woff2');
 }
 
-html{
+html, body {
+    width: 100%;
     height: 100%;
 }
 
-body {
-    min-height: 100%;
-}
-
 .content {
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -22,9 +19,13 @@ body {
 
 .main {
     flex-grow: 1;
-    min-height: 100vh;
 }
 
 header, .main, footer {
     flex-shrink: 0;
+}
+
+#main{
+    min-height: 86vh;
+    margin-bottom: 2vh;
 }

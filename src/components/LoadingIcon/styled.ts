@@ -6,7 +6,8 @@ export const Container = styled.div.attrs(() => ({
   display: flex;
   flex-direction: column;
   width: inherit;
-  height: 100vh;
+  height: inherit;
+  min-height: inherit;
   justify-content: center;
   align-items: center;
 `;
@@ -19,5 +20,4 @@ export const LoadingName = styled.div`
   line-height: 29px;
   text-align: justify;
   margin-top: 10px;
-  margin-bottom: 100px;
 `;
