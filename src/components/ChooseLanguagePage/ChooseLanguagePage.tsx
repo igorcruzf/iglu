@@ -12,18 +12,18 @@ import {
 export default function ChooseLanguagePage() {
     const navigate = useNavigate();
 
-    const handleClick = (flagUrl: string, text: string) => {
-        navigate("/iglu/quiz", { state: { flagUrl, text } });
+    const handleClick = (flagUrl: string, text: string, value: string) => {
+        navigate("/iglu/quiz", { state: { flagUrl, text, value } });
     };
 
     const languages = [
-        { flagUrl: "images/flags/brazilflag.png", text: "Português (BR)" },
-        { flagUrl: "images/flags/usaflag.png", text: "Inglês" },
-        { flagUrl: "images/flags/spainflag.png", text: "Espanhol" },
-        // { flagUrl: "images/flags/chinaflag.png", text: "Mandarim" },
-        // { flagUrl: "images/flags/japanflag.png", text: "Japonês" },
-        { flagUrl: "images/flags/franceflag.png", text: "Francês" },
-        { flagUrl: "images/flags/germanyflag.png", text: "Alemão" },
+        { flagUrl: "images/flags/brazilflag.png", text: "Português (BR)", value: "portuguese" },
+        { flagUrl: "images/flags/usaflag.png", text: "Inglês", value: "english" },
+        { flagUrl: "images/flags/spainflag.png", text: "Espanhol", value: "spanish" },
+        // { flagUrl: "images/flags/chinaflag.png", text: "Mandarim", value: "chinese" },
+        // { flagUrl: "images/flags/japanflag.png", text: "Japonês", value: "japanese" },
+        { flagUrl: "images/flags/franceflag.png", text: "Francês", value: "french" },
+        { flagUrl: "images/flags/germanyflag.png", text: "Alemão", value: "german" },
     ];
 
     return (
@@ -34,10 +34,10 @@ export default function ChooseLanguagePage() {
             </ChooseTextContainer>
             <ButtonsAndMapContainer>
                 <LanguageButtonsContainer>
-                    {languages.map(({ flagUrl, text }) => (
+                    {languages.map(({ flagUrl, text, value }) => (
                         <LanguageButton
-                            key={text}
-                            onClick={() => handleClick(flagUrl, text)}
+                            key={value}
+                            onClick={() => handleClick(flagUrl, text, value)}
                             flagUrl={flagUrl}
                             text={text}
                         />

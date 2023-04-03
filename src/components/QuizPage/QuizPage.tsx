@@ -26,11 +26,11 @@ export default function QuizPage() {
     const [quizNumber, setQuizNumber] = useState<number>(1);
 
     const location = useLocation();
-    const { flagUrl, text } = location.state;
+    const { flagUrl, text, value } = location.state;
 
     useEffect(() => {
         const getQuizData = async () => {
-            const quizData = await fetchQuizData({ language: text });
+            const quizData = await fetchQuizData({ language: value });
             setQuizData(quizData);
         };
 
