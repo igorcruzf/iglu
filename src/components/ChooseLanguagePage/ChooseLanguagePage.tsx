@@ -12,19 +12,19 @@ import {
 export default function ChooseLanguagePage() {
     const navigate = useNavigate();
 
-    const languages = [
-        { flagUrl: "images/flags/brazilflag.png", text: "Português (BR)", language: "portuguese" },
-        { flagUrl: "images/flags/usaflag.png", text: "Inglês", language: "english"},
-        { flagUrl: "images/flags/spainflag.png", text: "Espanhol", language: "spanish" },
-        { flagUrl: "images/flags/chinaflag.png", text: "Mandarim", language: "chinese" },
-        { flagUrl: "images/flags/japanflag.png", text: "Japonês", language: "japanese" },
-        { flagUrl: "images/flags/franceflag.png", text: "Francês", language: "french" },
-        { flagUrl: "images/flags/germanyflag.png", text: "Alemão", language: "german" },
-    ];
-
-    const handleClick = (flagUrl: string, text: string, language: string) => {
-        navigate("/iglu/quiz", { state: { flagUrl, text, language } });
+    const handleClick = (flagUrl: string, text: string, value: string) => {
+        navigate("/iglu/quiz", { state: { flagUrl, text, value } });
     };
+
+    const languages = [
+        { flagUrl: "images/flags/brazilflag.png", text: "Português (BR)", value: "portuguese" },
+        { flagUrl: "images/flags/usaflag.png", text: "Inglês", value: "english" },
+        { flagUrl: "images/flags/spainflag.png", text: "Espanhol", value: "spanish" },
+        // { flagUrl: "images/flags/chinaflag.png", text: "Mandarim", value: "chinese" },
+        // { flagUrl: "images/flags/japanflag.png", text: "Japonês", value: "japanese" },
+        { flagUrl: "images/flags/franceflag.png", text: "Francês", value: "french" },
+        { flagUrl: "images/flags/germanyflag.png", text: "Alemão", value: "german" },
+    ];
 
     return (
         <ChooseLanguageContainer>
@@ -34,10 +34,10 @@ export default function ChooseLanguagePage() {
             </ChooseTextContainer>
             <ButtonsAndMapContainer>
                 <LanguageButtonsContainer>
-                    {languages.map(({ flagUrl, text, language }) => (
+                    {languages.map(({ flagUrl, text, value }) => (
                         <LanguageButton
-                            key={text}
-                            onClick={() => handleClick(flagUrl, text, language)}
+                            key={value}
+                            onClick={() => handleClick(flagUrl, text, value)}
                             flagUrl={flagUrl}
                             text={text}
                         />
