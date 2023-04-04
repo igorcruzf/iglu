@@ -69,7 +69,7 @@ export default function QuizPage() {
                 if (quizDataIndex === quizDataList?.length - 1) {
                     setQuizData(undefined)
                 } else {
-                    if (quizDataIndex === quizDataList?.length - 5) {
+                    if (quizDataIndex === quizDataList?.length - 2) {
                         setReload(true)
                     }
                     setQuizData(quizDataList[quizDataIndex + 1])

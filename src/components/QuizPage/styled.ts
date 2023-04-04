@@ -39,13 +39,13 @@ export const History = styled.div`
   font-family: AvantGarde, sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 1.5vw; /* Use vw unit for font size */
+  font-size: 24px;
   line-height: 1.2;
   text-align: justify;
   color: #000000;
   max-width: 1150px; /* Limit the width of the text container */
   width: 95%; /* Use percentage for width to allow it to grow/shrink with screen size */
-  margin: 0 auto; /* Center the text container */
+  margin: 5% auto; /* Center the text container */
 `;
 
 
